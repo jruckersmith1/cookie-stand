@@ -124,4 +124,4 @@ addToDom: function () {
     item.innerHTML = hourCookCount[i] + this.cookiesPerHour[i];
 }
 
-waterfront.addToDom();
+waterfront.addToDom()
