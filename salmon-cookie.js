@@ -1,20 +1,22 @@
 var hourCookCount = [ '6am:', '7am', '8am:', '9am:', '10am:', '11am:', '12pm', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:', '8pm:'];
 
 var pdxAirport = {
-minCust: 23,
-maxCust: 65,
-AvgCookieSales: 6.3,
+    minCust: 23,
+    maxCust: 65,
+    avgCookieSales: 6.3,
+    openHours: [ '6am:', '7am', '8am:', '9am:', '10am:', '11am:', '12pm', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:', '8pm:' ], 
+
 customersPerHour: function (){
     var avgHour = [];
-    for (var i = 0; i < 14; i++) {
-      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.min;
-    avgHour.push(avgNumber);
+      for (var i = 0; i < 15; i++) {
+      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
+      avgHour.push(avgNumber);
  }
+    console.log(avgHour);
 this.cookiesPerHour = avgHour;
 },
 addToDom: function () {
    var displayNum = document.getElementById( 'pdxAirport' );
-    this.random();
     for (var i = 0; i < hourCookCount.length; i++) {
       var item = document.createElement ( 'li' );
     item.innerHTML = hourCookCount[i];
@@ -22,24 +24,28 @@ addToDom: function () {
     console.log(this.cookiesPerHour);
     item.innerHTML = hourCookCount[i] + this.cookiesPerHour[i];
 }
+}
+}
+pdxAirport.customersPerHour();
 pdxAirport.addToDom();
 
 
 var pioneerSquare = {
-minCust: 3,
-maxCust: 24,
-AvgCookieSales: 1.2,
-customersPerHour: function (){
+    minCust: 3,
+    maxCust: 24,
+    avgCookieSales: 1.2,
+    openHours: [ '6am:', '7am', '8am:', '9am:', '10am:', '11am:', '12pm', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:', '8pm:'],
+
+    customersPerHour: function (){
     var avgHour = [];
     for (var i = 0; i < 14; i++) {
-      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.min;
-     avgHour.push(avgNumber);
+      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
+      avgHour.push(avgNumber);
  }
 this.cookiesPerHour = avgHour;
 },
 addToDom: function () {
-    var displayNum = document.getElementById( 'pioneerSquare' );
-    this.random();
+   var displayNum = document.getElementById( 'pioneerSquare' );
     for (var i = 0; i < hourCookCount.length; i++) {
       var item = document.createElement ( 'li' );
     item.innerHTML = hourCookCount[i];
@@ -49,46 +55,55 @@ addToDom: function () {
 }
 }
 }
+pioneerSquare.customersPerHour();
 pioneerSquare.addToDom();
 
 
 var powells = {
-minCust: 11,
-maxCust: 38,
-AvgCookieSales: 3.7,
-customersPerHour: function (){
+    minCust: 11,
+    maxCust: 38,
+    avgCookieSales: 3.7,
+    openHours: [ '6am:', '7am', '8am:', '9am:', '10am:', '11am:', '12pm', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:', '8pm:'],
+
+    customersPerHour: function (){
     var avgHour = [];
     for (var i = 0; i < 14; i++) {
-      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.min;
+      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
     avgHour.push(avgNumber);
  }
 this.cookiesPerHour = avgHour;
 },
 addToDom: function () {
-    var displayNum = document.getElementById( 'powells' );
-    var item = document.createElement ( 'li' );
-    item.innerHTML = hourCookCount;
+   var displayNum = document.getElementById( 'powells' );
+    for (var i = 0; i < hourCookCount.length; i++) {
+      var item = document.createElement ( 'li' );
+    item.innerHTML = hourCookCount[i];
     displayNum.appendChild(item);
+    console.log(this.cookiesPerHour);
+    item.innerHTML = hourCookCount[i] + this.cookiesPerHour[i];
 }
 }
+}
+powells.customersPerHour();
 powells.addToDom();
 
 
 var stJohns = {
-minCust: 20,
-maxCust: 38,
-AvgCookieSales: 2.3,
-customersPerHour: function (){
+    minCust: 20,
+    maxCust: 38,
+    avgCookieSales: 2.3,
+    openHours: [ '6am:', '7am', '8am:', '9am:', '10am:', '11am:', '12pm', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:', '8pm:'],
+
+    customersPerHour: function (){
     var avgHour = [];
     for (var i = 0; i < 14; i++) {
-      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.min;
+      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
     avgHour.push(avgNumber);
  }
 this.cookiesPerHour = avgHour;
   },
 addToDom: function () {
     var displayNum = document.getElementById( 'stJohns' );
-    this.random();
     for (var i = 0; i < hourCookCount.length; i++) {
       var item = document.createElement ( 'li' );
     item.innerHTML = hourCookCount[i];
@@ -96,18 +111,22 @@ addToDom: function () {
     console.log(this.cookiesPerHour);
     item.innerHTML = hourCookCount[i] + this.cookiesPerHour[i];
 }
-
+}
+}
+stJohns.customersPerHour();
 stJohns.addToDom();
 
 
 var waterfront = {
-minCust: 2,
-maxCust: 16,
-avgCookieSales: 4.6,
-customersPerHour: function (){
+    minCust: 2,
+    maxCust: 16,
+    avgCookieSales: 4.6,
+    openHours: [ '6am:', '7am', '8am:', '9am:', '10am:', '11am:', '12pm', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:', '8pm:'],
+
+    customersPerHour: function (){
     var avgHour = [];
     for (var i = 0; i < 14; i++) {
-      var avgNumber = (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.min * this.avgCookieSales));
+      var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust; this.avgCookieSales;
     avgHour.push(avgNumber);
  }
 this.cookiesPerHour = avgHour;
@@ -115,7 +134,6 @@ this.cookiesPerHour = avgHour;
 addToDom: function () {
     
    var displayNum = document.getElementById( 'waterfront' );
-    this.random();
     for (var i = 0; i < hourCookCount.length; i++) {
       var item = document.createElement ( 'li' );
     item.innerHTML = hourCookCount[i];
@@ -123,5 +141,7 @@ addToDom: function () {
     console.log(this.cookiesPerHour);
     item.innerHTML = hourCookCount[i] + this.cookiesPerHour[i];
 }
-
-waterfront.addToDom()
+}
+}
+waterfront.customersPerHour();
+waterfront.addToDom();
