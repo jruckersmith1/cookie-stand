@@ -14,6 +14,7 @@ Store.prototype.customersPerHour = function () {
     var avgHour = [];
       for (var i = 0; i < 15; i++) {
       var avgNumber = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
+      avgNumber = Math.floor(avgNumber * this.avgCookieSales);
       avgHour.push(avgNumber);
  }
     console.log(avgHour);
