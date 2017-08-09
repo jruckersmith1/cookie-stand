@@ -25,7 +25,7 @@ Store.prototype.addToDom = function () {
   console.log(this.id);
    var displayNum = document.getElementById( this.id );
     for (var i = 0; i < this.openHours.length; i++) {
-      var item = document.createElement ( 'li' );
+      var item = document.createElement ( 'td' );
     item.innerHTML = this.openHours[i];
     displayNum.appendChild(item);
     console.log(this.cookiesPerHour);
