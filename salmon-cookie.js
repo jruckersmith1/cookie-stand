@@ -87,3 +87,38 @@ var waterfront = new Store( 'Waterfront', 2, 16, 4.6, 'waterfront');
 totalTotal();
 console.log(storz);
 console.log(salesByHour);
+
+
+// function Question ( question, answer, required ) {
+//     this.question = question;
+//     this.answer = answer;
+//     this.required = required;
+
+//     this.render();
+// }
+
+// Question.prototype.render = function () {
+//     var questionsList = document.getElementById( 'questions' );
+//     var questionLi = document.createElement( 'li' );
+//     questionLi.innerText = this.question;
+//     if ( this.required ) {
+//         questionLi.innerText += '*';
+//     }
+//     questionsList.appendChild( questionLi );
+// }
+
+// var question = new Question( 'What color is JavaScript?', 'yellow', true );
+// var question0 = new Question( 'What color is HTML?', 'red', true );
+// var question1 = new Question( 'What color is CSS?', 'blue' );
+
+// var form = document.getElementById( 'new-question' );
+// form.addEventListener( 'submit', function () {
+//     // prevent form submit from redirecting page
+//     event.preventDefault();
+var form = document.getElementById('new_store');
+form.addEventListener( 'submit', function () {
+    console.log( 'hello' );
+  event.preventDefault();
+  var newStore = new Store( this.store_name.value, parseInt(this.min_customers_per_hour.value), parseInt(this.max_customers_per_hour.value), parseInt(this.avg_cookies_sold_per_hour.value) );
+console.log( this.store_name.value)
+});
