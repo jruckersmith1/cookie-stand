@@ -5,3 +5,49 @@ td, tr {
 .total { 
     border: 5px solid black;
 }
+
+
+nav {
+  margin: 0 1em;
+  height: 100px;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share-icon {
+  width: 40px;
+}
+
+#share-bar {
+  background-color: #ccc;
+  width: 80px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 4px;
+
+  position: fixed;
+  top: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.salmon-assets {
+    width: 40px;
+}
+
+#share-pics {
+    width: 40px;
+    height: 80px;
+
+}
+
+h3 {
+  color: orangered;  
+
+}
+
